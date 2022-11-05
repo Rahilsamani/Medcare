@@ -1,0 +1,415 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prec.css">
+    <title>Health & Precautions</title>
+
+    <style>
+        :root {
+            --green: #092369;
+            --black: rgb(9, 32, 71);
+            --light-color: rgb(126, 114, 114);
+            --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+            --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+            --border: .2rem solid var(--green);
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s ease-out;
+            text-decoration: none;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 7rem;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 2rem 9%;
+        }
+
+        section:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .heading {
+            text-align: center;
+            padding-bottom: 2rem;
+            text-shadow: var(--text-shadow);
+            text-transform: uppercase;
+            color: var(--black);
+            font-size: 5rem;
+            letter-spacing: .4rem;
+        }
+
+
+        .header {
+            padding: 2rem 9%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+        }
+
+        .header .logo {
+            font-size: 2.5rem;
+            color: var(--black);
+        }
+
+        .header .logo i {
+            color: var(--green);
+        }
+
+        .header .navbar a {
+            font-size: 1.7rem;
+            color: var(--light-color);
+            margin-left: 2rem;
+        }
+
+        .header .navbar a:hover {
+            color: var(--green);
+        }
+
+        .book .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .book .row .image {
+            flex: 1 1 45rem;
+        }
+
+        .book .row .image img {
+            width: 100%;
+        }
+
+        .book .row form {
+            flex: 45rem;
+            background: #fff;
+            border: var(--border);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            padding: 2rem;
+            border-radius: .5rem;
+        }
+
+        .book .row form h3 {
+            color: var(--black);
+            padding-bottom: 1rem;
+            font-size: 3rem;
+        }
+
+        .book .row form .box {
+            width: 90%;
+            margin: 0.7em 0;
+            border-radius: .5rem;
+            border: var(--border);
+            font-size: 1.6rem;
+            color: var(--black);
+            text-transform: none;
+            padding: 1rem;
+        }
+
+        .book .row form .btn {
+            padding: 1rem 4rem;
+        }
+
+        .heading span {
+            text-transform: uppercase;
+            color: var(--green);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: .5rem;
+            padding-left: 1rem;
+            border: var(--border);
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            color: var(--green);
+            cursor: pointer;
+            font-size: 1.7rem;
+            background: #fff;
+        }
+
+        .btn span {
+            padding: .7rem 1rem;
+            border-radius: .5rem;
+            background: var(--green);
+            color: #fff;
+            margin-left: .5rem;
+        }
+
+        .btn:hover {
+            background: var(--green);
+            color: #fff;
+        }
+
+        .btn:hover span {
+            color: var(--green);
+            background: #fff;
+            margin-left: 1rem;
+        }
+
+        .services h1 {
+            color: var(--black);
+            text-shadow: var(--text-shadow);
+            font-size: 4rem;
+            line-height: 1.8;
+            padding-top: 5%;
+        }
+
+        .services h2 {
+            color: var(--black);
+            text-shadow: var(--text-shadow);
+            font-size: 4rem;
+            line-height: 1.8;
+            padding-top: 1%;
+        }
+
+        .services .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+            gap: 6rem;
+        }
+
+        .services .box-container .box {
+            background: #fff;
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            border: var(--border);
+            padding: 2.5rem 40;
+        }
+
+        .services .box-container .box i {
+            color: var(--green);
+            font-size: 5rem;
+            padding-bottom: .5rem;
+        }
+
+        .services .box-container .box h3 {
+            color: var(--black);
+            font-size: 2.5rem;
+            padding: 1rem 0;
+        }
+
+        .services .box-container .box ul li {
+            color: var(--light-color);
+            font-size: 2rem;
+            line-height: 2;
+            list-style-type: disc;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> medCare. </a>
+
+        <nav class="navbar">
+            <a href="#diabetes">Diabetes</a>
+            <a href="#cancer">Indigestion</a>
+            <a href="#alzimer">Common Cold</a>
+            <a href="#diarrhoea">Diarrhoea</a> <br>
+
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+    <!-- header section ends -->
+
+    <!-- Precautions section starts-->
+
+    <section class="services" id="services">
+        <h1 class="heading">health <span> & precautions</span></h1>
+        <h2 align="center" id="diabetes">Diabetes</h2><br><br>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3 align="center">Symptoms</h3>
+
+                <ul>
+                    <li>Urinate (pee) a lot, often at night</li>
+                    <li>Are very thirsty</li>
+                    <li>Lose weight without trying</li>
+                    <li>Are very hungry</li>
+                    <li>Have blurry vision</li>
+                    <li>Have numb or tingling hands or feet</li>
+                    <li>Feel very tired</li>
+                    <li>Have very dry skin</li>
+                    <li>Have sores that heal slowly</li>
+                    <li>Have more infections than usual</li>
+                    </u>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3 align="center">Home Made Remedies</h3>
+                <ul>
+                    <li>Fenugreek : <br>
+                        Soak 2 tablespoons of fenugreek seeds in water overnight and drink it with the seed the next
+                        morning on an empty stomach. This will help bring down your glucose levels.
+                    </li>
+                    <li>Bitter Gourd/Karela :<br>
+                        You can have it as a sabzi or consume it in the form of a smoothie.
+                    </li><br>
+                    <li>
+                        For more information click here<br>
+                        <a
+                            href="https://www.seniority.in/blog/15-easy-home-remedies-that-can-help-you-control-diabetes/">learn
+                            more...</a>
+                    </li>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 align="center" id="cancer">Indigestion</h2><br><br>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3 align="center">Symptoms</h3>
+
+                <ul>
+                    <li>feeling full or bloated</li>
+                    <li>feeling sick (nausea)</li>
+                    <li>belching</li>
+                    <li>bringing up (regurgitating) fluid or food into the gullet (oesophagus)</li>
+                    </u>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3 align="center">Home Made Remedies</h3>
+                <ul>
+                    <li>Peppermint tea : <br>
+                        Peppermint is more than a breath freshener. It also has an antispasmodic effect on the body, making it a great choice for relieving stomach problems like nausea and indigestion.
+                    <li>
+                        For more information click here<br>
+                        <a
+                            href="https://www.healthline.com/health/home-remedies-for-indigestion#peppermint-tea">learn
+                            more...</a>
+                    </li>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 align="center" id="alzimer">Common Cold</h2><br><br>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3 align="center">Symptoms</h3>
+
+                <ul>
+                    <li>Runny or stuffy nose</li>
+                    <li>Sore throat</li>
+                    <li>Cough</li>
+                    <li>Congestion</li>
+                    <li>Slight body aches or a mild headache</li>
+                    <li>Sneezing</li>
+                    <li>Feel very tired</li>
+                    <li>Low-grade fever</li>
+                    <li>Generally feeling unwell</li>
+                    </u>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3 align="center">Home Made Remedies</h3>
+                <ul>
+                    <li>Ginger : <br>
+                        A few slices of raw ginger root in boiling water may help sootheTrusted Source a cough or sore throat.
+                    </li>
+                    <li>Garlic :<br>
+                        Garlic contains the compound allicin, which may have antimicrobial properties. 
+                        Adding a garlic supplement to your diet might reduce the severity of cold symptoms.
+                    </li><br>
+                    <li>
+                        For more information click here<br>
+                        <a
+                            href="https://www.healthline.com/health/cold-flu/home-remedies#honey">learn
+                            more...</a>
+                    </li>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 align="center" id="diarrhoea">Diarrhoea</h2><br><br>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3 align="center">Symptoms</h3>
+
+                <ul>
+                    <li>Abdominal cramps or paint</li>
+                    <li>Bloating</li>
+                    <li>Nausea</li>
+                    <li>Are very hungry</li>
+                    <li>Vomiting</li>
+                    <li>Fever</li>
+                    <li>Blood in the stool</li>
+                    <li>Mucus in the stool</li>
+                    <li>Urgent need to have a bowel movement</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3 align="center">Home Made Remedies</h3>
+                <ul>
+                    <li>Drink Plenty of Fluids : <br>
+                        One of the essential steps to treating diarrhea is replacing fluids, says the NLM.
+                    </li>
+                    <li>Avoid Exercise :<br>
+                        Your workouts, especially strenuous ones, could dehydrate you even more.
+                    </li><br>
+                    <li>
+                        For more information click here<br>
+                        <a
+                            href="https://www.health.com/condition/digestive-health/diarrhea-home-remedies">learn
+                            more...</a>
+                    </li>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precautions section s-->
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Payment Page</title>
+	<link rel="stylesheet" type="text/css" href="payment.css">
+	<style>
+		*{padding:0; margin:0; box-sizing: border-box; font-family:sans-serif;}
+header{
+	width: 100vw;
+	min-height: 100vh;
+	background: #34495e;
+	font-size: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	background: white;
+	max-width: 800px;
+	min-height: 450px;
+	display: flex;
+	justify-content:space-between;
+	align-items: flex-start;
+	padding: 0.5rem 1.5rem;
+}
+.left{
+	flex-basis: 50%;
+}
+.right{
+	flex-basis: 50%;
+}
+form{
+	padding: 1rem;
+}
+
+h3{
+	margin-top: 1rem;
+	color:#2c3e50;
+	}
+
+form input[type="text"]{
+	width: 100%;
+	padding: 0.5rem 0.7rem;
+	margin: 0.5rem 0;
+	outline: none;
+}
+
+#zip{
+	display: flex;
+	margin-top: 0.5rem;
+}
+#zip select{
+	padding: 0.5rem 0.7rem;
+}
+#zip input[type="number"]{
+	padding: 0.5rem 0.7rem;
+	margin-left: 5px;	
+}
+input[type="submit"]{
+	width: 100%;
+	padding: 0.7rem 1.5rem;
+	background: #34495e;
+	color: white;
+	border: none;
+	outline: none;
+	margin-top: 1rem;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	background: #2c3e50;
+}
+
+
+@media only screen and (max-width: 770px){
+	.container{
+		flex-direction: column;
+	}
+	body{
+		overflow-x: hidden;
+	}
+}
+
+
+	</style>
+</head>
+<body>
+<header>
+	<div class="container">
+		<div class="left">
+			<h3>BILLING ADDRESS</h3>
+			<form action="index.html">
+				Full Name
+				<input type="text" name="" placeholder="Enter name" required>
+
+				Address
+				<input type="text" name="" placeholder="Enter address" required>
+				
+				City
+				<input type="text" name="" placeholder="Enter City" required>
+				<div id="zip">
+					<label>
+						State
+						<select>
+							<option>Choose State..</option>
+							<option>Andhra Pradesh</option>
+							<option>Bihar</option>
+							<option>Chhattisgarh</option>
+							<option>Madhya Pradesh</option>
+							<option>Goa</option>
+							<option>Haryana</option>
+							<option>Kerala</option>
+							<option>Maharashtra</option>
+							<option>Punjab</option>
+							<option>Rajasthan</option>
+							<option>Uttar Pradesh</option>
+						</select>
+					</label>
+						<label>
+						<pre> Zip code</pre>
+						<input type="number" name="" placeholder="Zip code" required >
+					</label>
+				</div>
+			<input type="submit" name="" value="Proceed to Checkout">
+			</form> 
+			<pre>
+			</pre>
+			
+		</div>
+		<div class="right">
+				<img src="https://img.freepik.com/free-vector/payment-information-concept-illustration_114360-2296.jpg?w=2000" width="400" >
+				</div>
+		</div>
+</header>
+</body>
+</html>
