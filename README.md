@@ -44,5 +44,5 @@ This project is licensed under the MIT License.
 
 ## 📧 Contact  
 
-For queries or collaboration, reach out at [rahilahmed1720@gmail.com] or connect on [(https://www.linkedin.com/in/rahil-ahmed-samani/)]. 
+For queries or collaboration, reach out at [rahilahmed1720@gmail.com] or connect on [https://www.linkedin.com/in/rahil-ahmed-samani/]. 
 
